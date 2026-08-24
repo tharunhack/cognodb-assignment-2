@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+@import '../src/App.css';
+
+:root { font-family: 'DM Sans', sans-serif; color: #252321; background: #f6f3ed; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.graph-view, .saved-view { padding: 39px 0 70px; }
+.graph-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 30px; }
+.graph-heading h2 { margin: 0 0 8px; font: 34px 'Instrument Serif', serif; }
+.graph-heading p { margin: 0; color: var(--muted); font: 11px 'DM Mono'; }
+.graph-count { color: var(--orange); font: 10px 'DM Mono'; text-transform: uppercase; }
+.connection-list { max-width: 760px; border-top: 1px solid var(--line); }
+.connection { display: grid; grid-template-columns: 150px 1fr 170px 40px; gap: 18px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); font: 11px 'DM Mono'; }
+.connection-node { color: var(--ink); }.connection-line { display: flex; align-items: center; gap: 10px; color: var(--orange); }.connection-line i { display: block; height: 2px; background: var(--orange); opacity: .7; }.connection-line b { font-weight: 400; }.connection strong { color: var(--muted); font: 10px 'DM Mono'; text-align: right; }
+.saved-list { max-width: 760px; }.saved-empty { border-top: 1px solid var(--line); padding-top: 25px; color: var(--muted); font: 12px 'DM Mono'; }
+@media (max-width: 720px) { .connection { grid-template-columns: 105px 1fr 35px; gap: 10px; }.connection-node { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }.connection-line { grid-column: 2; grid-row: 1; opacity: .35; }.connection strong { grid-column: 3; grid-row: 1; }.graph-heading { align-items: start; gap: 18px; flex-direction: column; } }
