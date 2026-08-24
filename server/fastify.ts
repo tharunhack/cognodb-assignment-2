@@ -58,5 +58,5 @@ app.get('/api/health', async (_request, reply) => {
   catch { return reply.code(503).send({ ok: false, source: 'cognodb' }) }
 })
 
-try { await app.listen({ port, host: '127.0.0.1' }) }
+try { await app.listen({ port, host: '0.0.0.0' }) }
 catch (error) { app.log.error(error); process.exit(1) }
